@@ -3,7 +3,8 @@
     <ul>
       <li ng-repeat="screencast in screencasts"
           ng-click="showScreencast(screencast)">
-        <h3>{{screencast.title}} <small>({{screencast.duration}})</small></h3>
+        <h3 ng-class="{active: $index == selectedRow}">{{screencast.title}}
+          <small>({{screencast.duration}})</small></h3>
       </li>
     </ul>
   </div>
